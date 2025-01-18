@@ -180,7 +180,7 @@ public class HelloController {
         Mat frame = new Mat();
         if (camera.read(frame)) {
             Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
-            String tempImagePath = "temp_face.jpg";
+            String tempImagePath = "i1.png";
             Imgcodecs.imwrite(tempImagePath, frame);
 
             boolean match = isFaceMatched(tempImagePath, databaseImagePath);
