@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.logintestjavafx.AboutUsController" spacing="20" style="-fx-padding: 20; -fx-background-color: #FFFFFF;">
+    <!-- Titre de la page -->
+    <Label text="About Us" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+
+    <!-- Section Our Story -->
+    <VBox spacing="10">
+        <Label text="Our Story" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+        <Label text="Founded in 2023, our company started with a simple mission: to provide high-quality products and exceptional service to our customers. Over the years, we have grown into a trusted name in the industry, thanks to our dedication and passion for excellence." style="-fx-font-size: 14px; -fx-wrap-text: true;"/>
+    </VBox>
+
+    <!-- Section Our Products -->
+    <VBox spacing="10">
+        <Label text="Our Products" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+        <Label text="We offer a wide range of products designed to meet the needs of our customers. From innovative tech gadgets to everyday essentials, our products are crafted with care and precision to ensure the best quality." style="-fx-font-size: 14px; -fx-wrap-text: true;"/>
+        <ImageView fitWidth="300" fitHeight="200" preserveRatio="true">
+            <Image url="@images/products.jpg"/> <!-- Remplacez par le chemin de votre image -->
+        </ImageView>
+    </VBox>
+
+    <!-- Section Our Team -->
+    <VBox spacing="10">
+        <Label text="Our Team" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+        <Label text="Our team is made up of passionate and dedicated professionals who are committed to delivering the best experience to our customers. We believe in collaboration, innovation, and continuous improvement." style="-fx-font-size: 14px; -fx-wrap-text: true;"/>
+        <ImageView fitWidth="300" fitHeight="200" preserveRatio="true">
+            <Image url="@i2.jpg"/> <!-- Remplacez par le chemin de votre image -->
+        </ImageView>
+    </VBox>
+
+    <!-- Section Contact Us -->
+    <VBox spacing="10">
+        <Label text="Contact Us" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+        <Label text="If you have any questions or need assistance, feel free to reach out to us. We are here to help!" style="-fx-font-size: 14px; -fx-wrap-text: true;"/>
+        <Label text="Email: support@example.com" style="-fx-font-size: 14px;"/>
+        <Label text="Phone: +1 234 567 890" style="-fx-font-size: 14px;"/>
+    </VBox>
+</VBox>

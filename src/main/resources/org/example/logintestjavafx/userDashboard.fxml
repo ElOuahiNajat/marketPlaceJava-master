@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.logintestjavafx.UserDashboardController" style="-fx-background-color: white;">
+    <!-- Barre latérale à gauche -->
+    <VBox style="-fx-background-color: #2C3E50; -fx-padding: 20;" spacing="10" prefWidth="250" minWidth="250" alignment="CENTER">
+        <Button text="Home" style="-fx-background-color: white; -fx-text-fill: #2C3E50; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" onAction="#handleHome" maxWidth="Infinity" />
+        <Button text="Commander Produit" style="-fx-background-color: white; -fx-text-fill: #2C3E50; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" onAction="#handleCommander" maxWidth="Infinity" />
+        <Button text="Consulter les produits commandés" style="-fx-background-color: white; -fx-text-fill: #2C3E50; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" onAction="#handleConsulterCommandes" maxWidth="Infinity" />
+        <Button text="Logout" style="-fx-background-color: white; -fx-text-fill: #2C3E50; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" onAction="#handleLogout" maxWidth="Infinity" />
+    </VBox>
+
+    <!-- Contenu principal -->
+    <ScrollPane fitToWidth="true" fitToHeight="true" HBox.hgrow="ALWAYS" style="-fx-background: white; -fx-background-color: white;" maxHeight="Infinity" maxWidth="Infinity">
+        <content>
+            <VBox style="-fx-background-color: #FFFFFF;" maxWidth="Infinity" maxHeight="Infinity">
+                <!-- Section Home -->
+                <VBox fx:id="homeSection" alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+                    <Label text="Welcome to the User Dashboard!" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+                    <Label fx:id="welcomeLabel" style="-fx-font-size: 14;"/>
+
+                    <!-- Cadre pour l'image et le nombre de produits commandés -->
+                    <StackPane style="-fx-background-color: #ECF0F1; -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10;">
+                        <Rectangle arcWidth="10" arcHeight="10" width="200" height="100" fill="#ECF0F1"/>
+                        <HBox alignment="CENTER" spacing="10">
+                            <ImageView fx:id="productImage" fitWidth="50" fitHeight="50" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/product_icon.png" /> <!-- Chemin relatif vers l'image -->
+                                </image>
+                            </ImageView>
+                            <Label fx:id="nombreProduitsCommandesLabel" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+                        </HBox>
+                    </StackPane>
+                </VBox>
+
+                <!-- Section des produits disponibles -->
+                <VBox fx:id="produitsDisponiblesSection" visible="false" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+                    <!-- Barre de recherche -->
+                    <HBox alignment="CENTER" style="-fx-padding: 10; -fx-background-color: #f8f9fa;" maxWidth="Infinity">
+                        <TextField fx:id="txtSearch" promptText="Rechercher par nom de produit" style="-fx-padding: 5; -fx-border-color: #BDC3C7; -fx-border-radius: 5; -fx-background-color: #F9F9F9;" HBox.hgrow="ALWAYS" maxWidth="500"/>
+                        <Button text="Rechercher" style="-fx-background-color: #2C3E50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 5 15;" onAction="#handleSearch" />
+                    </HBox>
+
+                    <FlowPane fx:id="produitsDisponiblesListView"
+                              prefWrapLength="1200"
+                              style="-fx-padding: 10; -fx-background-color: white;"
+                              hgap="10"
+                              vgap="10"
+                              maxWidth="Infinity"
+                              VBox.vgrow="ALWAYS">
+                        <padding>
+                            <Insets top="5" right="5" bottom="5" left="5"/>
+                        </padding>
+                    </FlowPane>
+                </VBox>
+
+                <!-- Section des produits commandés -->
+                <VBox fx:id="produitsCommandesSection" visible="false" VBox.vgrow="ALWAYS" maxWidth="800">
+                    <FlowPane fx:id="produitsCommandesListView"
+                              prefWrapLength="800"
+                              style="-fx-padding: 10; -fx-background-color: white;"
+                              hgap="10"
+                              vgap="10"
+                              VBox.vgrow="ALWAYS">
+                        <padding>
+                            <Insets top="5" right="5" bottom="5" left="5"/>
+                        </padding>
+                    </FlowPane>
+                </VBox>
+            </VBox>
+        </content>
+    </ScrollPane>
+</HBox>

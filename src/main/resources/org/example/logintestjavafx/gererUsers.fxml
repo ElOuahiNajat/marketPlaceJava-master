@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.logintestjavafx.GererUsersController" spacing="10" style="-fx-padding: 10;" stylesheets="@styles.css">
+    <!-- Titre -->
+    <Label text="Gestion des Utilisateurs" styleClass="title-label"/>
+
+    <!-- Barre de recherche et boutons de tri -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <!-- Icône de recherche -->
+        <ImageView fitWidth="20" fitHeight="20">
+            <Image url="@search.png" />
+        </ImageView>
+        <!-- Champ de recherche -->
+        <TextField fx:id="txtSearch" promptText="Rechercher par nom" styleClass="search-field"/>
+        <Button fx:id="btnSortByName" text="Trier par nom" styleClass="sort-button"/>
+        <Button fx:id="btnSortByRole" text="Trier par rôle" styleClass="sort-button"/>
+    </HBox>
+
+    <!-- Liste des utilisateurs -->
+    <ListView fx:id="usersListView" prefHeight="200.0" prefWidth="600.0" styleClass="list-view"/>
+
+    <!-- Champs de saisie -->
+    <HBox spacing="10">
+        <TextField fx:id="txtName" promptText="Nom" styleClass="input-field"/>
+        <TextField fx:id="txtEmail" promptText="Email" styleClass="input-field"/>
+        <TextField fx:id="txtRole" promptText="Rôle" styleClass="input-field"/>
+    </HBox>
+
+    <!-- Boutons d'action -->
+    <HBox spacing="10">
+        <Button fx:id="btnEditUser" text="Modifier" onAction="#handleEditUser" styleClass="action-button"/>
+        <Button fx:id="btnDeleteUser" text="Supprimer" onAction="#handleDeleteUser" styleClass="action-button delete-button"/>
+    </HBox>
+
+    <!-- Copyright en bas -->
+    <Label text="© 2025" styleClass="copyright-label" VBox.vgrow="ALWAYS">
+        <VBox.margin>
+            <Insets top="20"/>
+        </VBox.margin>
+    </Label>
+</VBox>

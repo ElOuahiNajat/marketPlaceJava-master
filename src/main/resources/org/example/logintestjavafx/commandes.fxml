@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.logintestjavafx.CommandesController">
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <content>
+                <FlowPane fx:id="produitsCommandesListView" alignment="CENTER" hgap="15" vgap="20" prefWrapLength="1200"/>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
