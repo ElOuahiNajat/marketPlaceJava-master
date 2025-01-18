@@ -417,7 +417,7 @@ public class ProduitsController {
         Connection conDb = con.getConnection();
 
         String query = "SELECT UserID, Nom, Role FROM Users WHERE LOWER(Nom) LIKE ?";
-
+//        %recherche partielle
         try (PreparedStatement preparedStatement = conDb.prepareStatement(query)) {
             preparedStatement.setString(1, "%" + searchText + "%");
             ResultSet resultSet = preparedStatement.executeQuery();

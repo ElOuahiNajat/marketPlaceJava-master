@@ -497,7 +497,7 @@
                   <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <!-- Open Chat Button -->
-                        <Button fx:id="btnOpenChat" layoutX="700.0" layoutY="20.0" text="Open Chat" onAction="#handleOpenChat" style="-fx-background-color: #2C3E50; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);" />
+                        <Button fx:id="btnOpenChat" layoutX="700.0" layoutY="20.0" text="open chat" onAction="#handleOpenChat" style="-fx-background-color: #2C3E50; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);" />
                         <!-- Titre de la page -->
                         <Label alignment="CENTER" layoutX="200.0" layoutY="10.0" prefHeight="37.0" prefWidth="400.0" text="Notifications">
                            <font>
