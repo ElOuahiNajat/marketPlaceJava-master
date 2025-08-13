@@ -1,69 +1,90 @@
-# 📌 Marketplace Project – Java Desktop Application
+#  Marketplace Project – Java Desktop Application
 
-## 🖥️ Description
-The **Marketplace Project** is a Java-based desktop application designed to simulate an online marketplace where buyers and sellers can interact to trade goods and services. This application provides an intuitive and user-friendly interface, enabling users to perform various e-commerce functions such as product listing, purchasing, and order management.  
-
-This project is ideal for showcasing skills in **object-oriented programming, JavaFX, database integration, and desktop application design**.  
-
-Additionally, the application allows managing users, products, and categories via a JavaFX interface connected to a MySQL database. It offers two roles: **Administrator** and **Client**, with functionalities tailored to each role.
+## 1. Introduction
+The **Marketplace Project** is a Java-based desktop application designed to simulate an online marketplace where buyers and sellers can interact to trade goods and services.  
+The application provides an intuitive and user-friendly interface, enabling users to perform various e-commerce functions such as product listing, purchasing, and order management.  
+It demonstrates skills in **object-oriented programming, JavaFX, database integration, and desktop application design**.
 
 ---
 
-## 🚀 Fonctionnalités principales
+##  2. Objectifs du projet
+- Créer une application desktop fonctionnelle de type e-commerce.
+- Permettre la gestion des utilisateurs, produits et catégories.
+- Mettre en œuvre une architecture basée sur les rôles : **Admin** et **Client**.
+- Illustrer l’intégration JavaFX avec une base de données MySQL.
 
-### 1. Authentification
+---
+
+##  3. Architecture du projet
+L’application suit une architecture simple **MVC (Model-View-Controller)** :
+- **Model** : classes représentant les entités (User, Product, Category, Order).
+- **View** : interfaces JavaFX (Login, Dashboard Admin, Dashboard Client, etc.).
+- **Controller** : gestion des événements, interaction avec la base de données via JDBC.
+
+Diagramme de l’architecture (à ajouter) :  
+*![Architecture Diagram](path/to/architecture.png)*
+
+---
+
+##  4. Fonctionnalités principales
+
+### Authentification
 - Login et Signup avec validation des champs.
-- Rôles : Admin / Client.
-- Upload d’image pour le profil utilisateur.
+- Upload d’image pour le profil.
+- Gestion des rôles : Admin / Client.
 
-### 2. Partie Administrateur
+### Partie Administrateur
 - Dashboard avec statistiques.
-- Gestion des utilisateurs : ajout, modification, suppression, recherche, tri.
-- Gestion des produits : ajout, modification, suppression, tri, recherche.
-- Gestion des catégories : ajout, modification, recherche, tri.
-- Réception de notifications lorsqu’un client commande un produit.
+- Gestion des utilisateurs, produits et catégories.
+- Notifications sur les commandes clients.
 
-### 3. Partie Client
+### Partie Client
 - Dashboard dédié.
-- Commander un produit.
-- Rechercher un produit.
-- Consulter l’historique de ses commandes.
+- Passer et suivre des commandes.
+- Rechercher et filtrer les produits.
 
 ---
 
-## 🛠️ Outils utilisés
+## 🛠️ 5. Technologies utilisées
 
 | Outil           | Rôle                                      |
 |-----------------|------------------------------------------|
-| JavaFX          | Interface graphique de l’application     |
+| JavaFX          | Interface graphique                       |
 | MySQL           | Base de données                           |
 | PHPMyAdmin      | Gestion visuelle de la base MySQL        |
-| XAMPP           | Serveur MySQL + Apache (PHPMyAdmin inclus) |
-| IntelliJ IDEA   | IDE pour développer en Java               |
+| XAMPP           | Serveur MySQL + Apache                    |
+| IntelliJ IDEA   | IDE de développement Java                 |
 
 ---
 
-## 📂 Installation et configuration
+## 📂 6. Installation et configuration
+1. Installer XAMPP et démarrer Apache + MySQL.
+2. Créer la base de données via PHPMyAdmin et importer le fichier `.sql`.
+3. Configurer IntelliJ IDEA avec JavaFX SDK et JDBC MySQL Connector.
+4. Modifier le fichier `DBConnection.java` avec vos informations MySQL.
 
-### 1️⃣ Installer XAMPP
-- Télécharger XAMPP : [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
-- Lancer XAMPP Control Panel et démarrer **Apache** et **MySQL**.
+---
 
-### 2️⃣ Configurer la base de données
-- Ouvrir PHPMyAdmin via `http://localhost/phpmyadmin/`.
-- Créer une base de données (ex. `gestion_app`).
-- Importer le fichier `.sql` fourni dans le projet.
+##  7. Exécution
+- Lancer la classe principale `Main.java` dans IntelliJ IDEA.  
+- L’interface de connexion apparaît et l’application est prête à être utilisée.
 
-### 3️⃣ Configurer IntelliJ IDEA
-- Installer IntelliJ IDEA : [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
-- Importer le projet JavaFX.
-- Vérifier que **JavaFX SDK** est bien configuré dans `Project Structure`.
-- Ajouter le **JDBC MySQL Connector** au classpath.
+---
 
-### 4️⃣ Connexion à la base de données
-Dans le fichier `DBConnection.java` (ou équivalent), modifier les informations :
+##  8. Captures d’écran
+*(Ajouter des images : Login, Dashboard Admin, Gestion Produits, Commande Client, etc.)*
 
-```java
-String url = "jdbc:mysql://localhost:3306/gestion_app";
-String user = "root";
-String password = "";
+---
+
+##  9. Résultats
+- Gestion complète des utilisateurs, produits et catégories.
+- Interaction fluide entre le client et l’administrateur.
+- Fonctionnalités e-commerce simulées avec succès.
+
+---
+
+##  10. Conclusion
+Le projet **Marketplace** illustre la conception et le développement d’une application desktop Java complète, intégrant **JavaFX**, **JDBC**, et une base de données **MySQL**.  
+Il montre la maîtrise des concepts OOP, de l’architecture MVC et des interactions utilisateur en e-commerce.
+
+
