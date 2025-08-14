@@ -21,7 +21,7 @@ The application follows a simple **MVC (Model-View-Controller)** architecture:
 - **View**: JavaFX interfaces (Login, Admin Dashboard, Client Dashboard, etc.).  
 - **Controller**: handles events and interacts with the database via JDBC.  
 
-Architecture diagram (to add):  
+Architecture diagram :  
 <img width="553" height="375" alt="archMarket" src="https://github.com/user-attachments/assets/6d074804-d944-49bd-ac17-a4d90e543db0" />
 
 
@@ -46,7 +46,7 @@ Architecture diagram (to add):
 
 ---
 
-## 🛠️ 5. Technologies Used
+##  5. Technologies Used
 
 | Tool           | Purpose                                    |
 |----------------|--------------------------------------------|
@@ -58,7 +58,7 @@ Architecture diagram (to add):
 
 ---
 
-## 📂 6. Installation and Configuration
+##  6. Installation and Configuration
 1. Install XAMPP and start Apache + MySQL.
 2. Create the database via PHPMyAdmin and import the `.sql` file.
 3. Configure IntelliJ IDEA with JavaFX SDK and JDBC MySQL Connector.
@@ -83,3 +83,8 @@ Architecture diagram (to add):
 ## 9. Conclusion
 The **Marketplace** project demonstrates the design and development of a complete Java desktop application integrating **JavaFX**, **JDBC**, and a **MySQL** database.  
 It showcases mastery of OOP concepts, MVC architecture, and user interactions in an e-commerce environment.
+
+---
+## 10. Project Report
+[rapport_java MarketPlace.pdf](https://github.com/user-attachments/files/21771084/rapport_java.MarketPlace.pdf)
+
